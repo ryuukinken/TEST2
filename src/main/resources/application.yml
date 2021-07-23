@@ -1,0 +1,21 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/mysql?serverTimezone=UTC
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    druid:
+      filter: stat,wall
+      stat-view-servlet:
+        login-username: admin
+        login-password: 123456
+        enabled: true
+      web-stat-filter:
+        enabled: true
+server:
+  servlet:
+    context-path: /users
+mybatis-plus:
+  global-config:
+    db-config:
+      update-strategy: ignored
